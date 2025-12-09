@@ -1,1 +1,1 @@
-# hackerrank-solutions
+# leetcode-hackerrank-solutions
