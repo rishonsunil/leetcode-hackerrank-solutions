@@ -1,0 +1,14 @@
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        res= []
+        res = s.split(" ")
+        if res[-1] != "":
+            return len(res[-1])
+        else:
+            return self.lengthOfLastWord(s[:-1])
+sol = Solution()
+print(sol.lengthOfLastWord("Hello World"))
