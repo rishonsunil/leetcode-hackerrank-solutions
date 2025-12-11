@@ -1,0 +1,12 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        stack ={}
+        for n in nums:
+            stack[n]=stack.get(n,0)+1
+        for n in stack:
+            if stack[n]==1:
+                return n
