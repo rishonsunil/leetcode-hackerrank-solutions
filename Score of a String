@@ -1,0 +1,14 @@
+class Solution(object):
+    def scoreOfString(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        res=0
+
+        for x in range(len(s)-1):
+            res += abs(ord(s[x])-ord(s[x+1]))
+            if x==len(s):
+                break
+        return res
+        
