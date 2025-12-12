@@ -1,0 +1,23 @@
+class Solution(object):
+    def maxFreqSum(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        vow={}
+        con={}
+        for x in s:
+            if x in ['a','e','i','o','u']:
+                vow[x]=vow.get(x,0)+1
+            else:
+                con[x]=con.get(x,0)+1
+        if vow:
+            max_vow=max(vow.values())
+        else:
+            max_vow=0
+        if con:
+            max_con=max(con.values())
+        else:
+            max_con=0
+        return max_vow+max_con
+        
