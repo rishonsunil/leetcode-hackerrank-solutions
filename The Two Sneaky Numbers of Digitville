@@ -1,0 +1,15 @@
+class Solution(object):
+    def getSneakyNumbers(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        count={}
+        arr=[]
+        for x in nums:
+            count[x]=count.get(x,0)+1
+        for i in count:
+            if count[i]==2:
+                arr.append(i)
+        return arr
+        
