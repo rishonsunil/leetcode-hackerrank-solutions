@@ -1,0 +1,15 @@
+class Solution(object):
+    def truncateSentence(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: str
+        """
+        words=[]
+        res=""
+        words=s.split(" ")
+        for x in range(0,k-1):
+            res+= words[x]
+            res+=" "
+        res+=words[k-1]
+        return res
